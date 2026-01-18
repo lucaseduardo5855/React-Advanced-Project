@@ -1,0 +1,167 @@
+- vamos limpar tudo, vamos configurar o eslint, o prettier etc, o editconfig, deixar só o app.js, index.js e o index.html
+
+-criar 2 pasta 1 de components, e um de pages
+
+- vamos criar pasta de login e index
+
+-**STYLED COMPONENTES**
+
+- e tb vamos criar o styled pq vamos utilizar styled componentes
+
+- vamos aprender importar o styled component, por exemplo no index.js temos uma function e nela podemos jogar <title /> por exemplo q fizemos no styled, onde criamos um styled.js e la exportamos o title = styled.h1 por exemplo e dentro do `` colocamos as coisas do css
+
+-Criamos uma psta de styles com globalStyles p colocar tudo de global do projeto  dentro dela exportamos ela mesmo e fazemos tudo q temos p fazer de geral, body, * etc
+
+- fizemos um container dentro dela (index.js) com styled entao importamos o styled, e dentro mesmo do globalstyles.js vamos exportar const Container e jogar no index.js como se fosse a section
+
+ficando mais ou menos assim 
+import { Container } from '../../styles/GlobalStyles';
+import { Title, Paragrafo } from './styled';
+
+export default function Login() {
+  return (
+    <Container>
+      <Title>
+        Login
+        <small>Oie</small>
+      </Title>
+      <Paragrafo>
+        Lorem ipsum 
+	</Paragrafo>
+
+- **CONFIGURANDO AS CORES**
+
+- vamos criar uma psata config dentro do src e criar um colors.js vamos export const varias cores como primaryColor, sucessColor, infoColor, error e warn e primaryDark etc
+
+- vamos importar dentro do nosso global
+
+-
+
+-
+
+- 
+
+-
+
+-
+
+- 
+
+-
+
+-
+
+- 
+
+-
+
+-
+
+- 
+
+-
+
+-
+
+- 
+
+-
+
+-
+
+- 
+
+-
+
+-
+
+- 
+
+-
+
+-
+
+- 
+
+-
+
+-
+
+- 
+
+-
+
+-
+
+- 
+
+-
+
+-
+
+- 
+
+-
+
+-
+
+- 
+
+-
+
+-
+
+- 
+
+-
+
+-
+
+- 
+
+-
+
+-
+
+- 
+
+-
+
+-
+
+- 
+
+-
+
+-
+
+- 
+
+-
+
+-
+
+- 
+
+-
+
+-
+
+- 
+
+-
+
+-
+
+- 
+
+-
+
+-
+
+- 
+
+-
+
+-
+
