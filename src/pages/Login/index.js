@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux'; // Hook para disparar ações
 
 import { Container } from '../../styles/GlobalStyles';
 import { Title, Paragrafo } from './styled';
+import * as exampleActions from '../../store/modules/example/actions';
 
 export default function Login() {
   const disparador = useDispatch(); // DISPATCH: Cria o "mensageiro" que vai levar o pedido até o Redux
@@ -11,9 +12,7 @@ export default function Login() {
     e.preventDefault();
 
     // Dispara a ação para o Reducer ouvir
-    disparador({
-      type: 'botao_clicado', // O NOME EXATO que está no switch do reducer
-    });
+    disparador(exampleActions.clicaBotao());
   }
 
   //assim q o componente é montado ela executa 1x apenas
