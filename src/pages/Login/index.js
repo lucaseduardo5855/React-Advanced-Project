@@ -1,9 +1,32 @@
 import React from 'react';
+import { useDispatch } from 'react-redux'; // Hook para disparar ações
 
 import { Container } from '../../styles/GlobalStyles';
 import { Title, Paragrafo } from './styled';
 
 export default function Login() {
+  const disparador = useDispatch(); // DISPATCH: Cria o "mensageiro" que vai levar o pedido até o Redux
+
+  function handleClick(e) {
+    e.preventDefault();
+
+    // Dispara a ação para o Reducer ouvir
+    disparador({
+      type: 'botao_clicado', // O NOME EXATO que está no switch do reducer
+    });
+  }
+
+  //assim q o componente é montado ela executa 1x apenas
+  /* React.useEffect(() => {
+    async function getData() {
+      const response = await axios.get('/alunos');
+      const { data } = response;
+      console.log(data);
+    }
+
+    getData();
+  }, []); */
+
   return (
     <Container>
       <Title>
@@ -16,8 +39,9 @@ export default function Login() {
         perferendis pariatur facere, quod vero itaque laboriosam cumque quo
         optio.
       </Paragrafo>
-      <button type="button">Enviar</button>
-      <a href="">teste</a>
+      <button onClick={handleClick} type="button">
+        Enviar
+      </button>
     </Container>
   );
 }
