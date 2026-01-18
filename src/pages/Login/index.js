@@ -12,7 +12,7 @@ export default function Login() {
     e.preventDefault();
 
     // Dispara a ação para o Reducer ouvir
-    disparador(exampleActions.clicaBotao());
+    disparador(exampleActions.clicaBotaoRequest());
   }
 
   //assim q o componente é montado ela executa 1x apenas

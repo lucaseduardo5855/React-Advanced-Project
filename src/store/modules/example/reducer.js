@@ -1,3 +1,5 @@
+import * as types from './types';
+
 const initialState = {
   botaoClicado: false, // Estado inicial: como a aplicação começa
 };
@@ -5,7 +7,8 @@ const initialState = {
 // REDUCER: O "Gerente" que escuta os pedidos e muda o estado
 export default function (state = initialState, action) {
   switch (action.type) {
-    case 'botao_clicado': {
+    case types.botao_clicado_sucess: {
+      console.log('Sucesso!');
       // Nunca altere o "state" direto. Crie uma cópia dele primeiro.
       const newState = { ...state };
 
@@ -16,8 +19,18 @@ export default function (state = initialState, action) {
       return newState;
     }
 
-    default:
-      // Se a ação não for conhecida, devolve o estado como estava (não faz nada)
+    case types.botao_clicado_failure: {
+      console.log('Deu Erro!');
       return state;
+    }
+
+    case types.botao_clicado_request: {
+      console.log('Estou fazendo a requisição!');
+      return state;
+    }
+
+    default: {
+      return state;
+    }
   }
 }
