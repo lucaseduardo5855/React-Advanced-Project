@@ -1,4 +1,4 @@
-import * as types from './types';
+import * as types from '../types';
 
 const initialState = {
   botaoClicado: false, // Estado inicial: como a aplicação começa
